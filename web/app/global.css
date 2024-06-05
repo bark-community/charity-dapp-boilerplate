@@ -1,19 +1,212 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base Styles */
 html,
 body {
-  height: 100%;
+  font-family: 'Inter', sans-serif; /* Use Inter font */
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.wallet-adapter-button-trigger {
-  background: rgb(100, 26, 230) !important;
-  border-radius: 8px !important;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+/* Color Presets */
+:root,
+.light,
+.light-theme {
+  --orange-1: #fefcfc;
+  --orange-9: #ad3e00;
+  --orange-11: #bf4f1c;
 }
-.wallet-adapter-dropdown-list,
-.wallet-adapter-button {
-  font-family: inherit !important;
+
+/* Buttons */
+.button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px; /* Better button radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added default shadow */
+}
+
+.button-primary {
+  background-color: var(--orange-9);
+  color: var(--orange-1);
+}
+
+.button-primary:hover {
+  background-color: var(--orange-11);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--orange-9);
+  border: 1px solid var(--orange-9);
+}
+
+.button-secondary:hover {
+  color: var(--orange-11);
+  border-color: var(--orange-11);
+}
+
+/* Text Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--orange-1);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--orange-9);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--orange-9);
+  margin-bottom: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--orange-1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange-9);
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  color: var(--orange-9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--orange-11);
+}
+
+/* Info Section */
+.info {
+  background-color: var(--orange-1);
+  padding: 4rem 0;
+}
+
+.info-title {
+  font-size: 2rem;
+  color: var(--orange-9);
+  margin-bottom: 1rem;
+}
+
+.info-content {
+  font-size: 1.2rem;
+  color: var(--orange-9);
+}
+
+/* Card */
+.card {
+  background-color: var(--orange-1);
+  padding: 2rem;
+  border-radius: 8px; /* Better card radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange-9);
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: var(--orange-9);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--orange-1);
+  color: var(--orange-9);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--orange-9);
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--orange-11);
+}
+
+/* Light/Dark Mode Toggle */
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mode-toggle button {
+  background-color: var(--orange-9);
+  color: var(--orange-1);
+  border: none;
+  padding: 0.75rem 1.5rem; /* Adjusted padding */
+  border-radius: 8px; /* Better toggle button radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle button:hover {
+  background-color: var(--orange-11);
 }
